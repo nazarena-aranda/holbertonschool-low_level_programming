@@ -18,7 +18,6 @@ int main(void) {
 		}
 	
 	}
-	printf("salio");
 	putchar('\n');
 	return(0);
 }
