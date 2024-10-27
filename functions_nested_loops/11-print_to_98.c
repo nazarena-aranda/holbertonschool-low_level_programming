@@ -1,9 +1,7 @@
 #include "main.h"
 /**
- * print_to_98 - prints all number from n to 98
  * print_numbers - print numbers
  * @num: number to print
- * @n: number from start
  * Return: 0
  */
 
@@ -30,6 +28,12 @@ void print_numbers(int num)
 	}
 
 }
+
+/**
+ * print_to_98 - prints all number from n to 98
+ * @n: number from start
+ * Return: 0
+ */
 
 void print_to_98(int n)
 {
