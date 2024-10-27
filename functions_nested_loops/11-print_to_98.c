@@ -1,35 +1,60 @@
 #include "main.h"
 /**
- * print_to_98 - prints all number to 98
+ * print_to_98 - prints all number from n to 98
+ * print_numbers - print numbers
+ * @num: number to print
  * @n: number from start
- * Return: -
+ * Return: 0
  */
+
+
+void print_numbers(int num)
+{
+	int divisor = 1;
+
+	if (num < 0)
+	{
+		_putchar('-');
+		num = num * -1;
+	}
+
+	while (num / divisor >= 10)
+	{
+		divisor = divisor * 10;
+	}
+
+	while (divisor > 0)
+	{
+		_putchar(((num / divisor) % 10) + 48);
+		divisor = divisor / 10;
+	}
+
+}
 
 void print_to_98(int n)
 {
-	for (n = n; n <= 98; n++)
+	if (n <= 98)
 	{
-		int i = n;
-
-		if (i < 0)
+		for (n = n; n <= 98; n++)
 		{
-			_putchar('-');
-			i = i * -1;
+			print_numbers(n);
+			if (n != 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
-
-		if (i >= 10)
+	}
+	else
+	{
+		for (n = n; n >= 98; n--)
 		{
-			_putchar(i / 10 + 48);
-			_putchar(i % 10 + 48);
-		}
-		else
-		{
-			_putchar(i + 48);
-		}
-		if (n != 98)
-		{
-			_putchar(',');
-			_putchar(' ');
+			print_numbers(n);
+			if (n != 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
 	}
 	_putchar('\n');
