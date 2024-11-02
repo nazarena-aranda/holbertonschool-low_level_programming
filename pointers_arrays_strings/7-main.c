@@ -9,7 +9,7 @@ int main(void)
 {
     char *str;
 
-    str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+    str = "0123456789";
     puts_half(str);
     return (0);
 }
