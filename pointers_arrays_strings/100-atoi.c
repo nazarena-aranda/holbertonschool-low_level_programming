@@ -9,23 +9,19 @@ int _atoi(char *s)
 {
 	int i = 0;
 	int result = 0;
-	int temp = '+';
+	int sign = 1;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-			if (i > 0)
-			{
-				if (s[i - 1] == '+' || s[i - 1] == '-')
-				{
-					temp = s[i - 1];
-				}
-			}
 			result = result * 10 + s[i] -  48;
 		}
+		if (s[i] == '-')
+		{
+			sign  = sign * -1;
+		}
 	}
-	if (temp == '-')
-		result = result * -1;
+	result = result * sign;
 	return (result);
 }
