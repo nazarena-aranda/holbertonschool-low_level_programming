@@ -22,6 +22,6 @@ void puts_half(char *str)
 	}
 	for (c = mitad; c < i; c++)
 		_putchar(str[c]);
-	
+
 	_putchar('\n');
 }
