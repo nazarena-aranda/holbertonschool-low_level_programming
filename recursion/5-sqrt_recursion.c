@@ -7,20 +7,25 @@
 
 int _sqrt_recursion(int n)
 {
-	int i;
+	static int i = 1;
+	int result;
 
-	if (n == 0 || n < 0)
+	if (n < 0)
 	{
+		i = 1;
 		return (-1);
 	}
-	else
-	       i = 1;
-
-	while (i * i < n)
-		i++;
-
-	if (i * i == n)
-		return (i);
-	return (-1);
-
+	else if (i * i == n)
+	{
+		result = i;
+		i = 1;
+		return (result);
+	}
+	else if (i * i > n)
+	{
+		i = 1;
+		return (-1);
+	}
+	i++;
+	return (_sqrt_recursion(n));
 }
