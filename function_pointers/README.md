@@ -4,8 +4,7 @@
 
 Este proyecto explora el concepto de **punteros a funciones** en C, una herramienta poderosa que permite ejecutar funciones dinámicamente según nuestras necesidades.
 
-![Punteros en C](https://upload.wikimedia.org/wikipedia/commons/c/c3/C_Programming_Language.svg)
-
+(https://inpyjama.com/content/images/2023/11/IMG_0930.jpg)
 ---
 
 ## Estructura del Proyecto 🛠️
