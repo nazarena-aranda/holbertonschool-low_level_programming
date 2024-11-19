@@ -14,7 +14,8 @@ Este proyecto explora el concepto de **punteros a funciones** en C, una herramie
   Imprime un nombre de diferentes maneras dependiendo de la función que le pases. 
   Por ejemplo, puedes imprimir el nombre tal cual o en mayúsculas.
 
-![Ejemplo de impresión](https://media.geeksforgeeks.org/wp-content/uploads/20190723103148/NamePointer.png)
+<img width="299" alt="image" src="https://github.com/user-attachments/assets/aaf54226-8899-4e3d-b9ba-d61d72ec3bac">
+
 
 ---
 
@@ -22,7 +23,7 @@ Este proyecto explora el concepto de **punteros a funciones** en C, una herramie
 - **¿Qué hace?**:
   Aplica una función a cada elemento de un arreglo. Puedes hacer que se impriman como están, en hexadecimal, o cualquier otra operación que definas.
 
-![Arreglos iterados](https://media.geeksforgeeks.org/wp-content/uploads/20190918192327/Pointer.png)
+<img width="90" alt="image" src="https://github.com/user-attachments/assets/f4cffd07-6979-41ab-987f-9ec958101998">
 
 ---
 
@@ -30,7 +31,8 @@ Este proyecto explora el concepto de **punteros a funciones** en C, una herramie
 - **¿Qué hace?**:
   Busca un entero en un arreglo utilizando una función para definir la condición de búsqueda. Por ejemplo, buscar el primer número positivo o un número específico.
 
-![Búsqueda de índices](https://media.geeksforgeeks.org/wp-content/uploads/20221201192427/SearchAlgorithm.png)
+<img width="39" alt="image" src="https://github.com/user-attachments/assets/c74e70ee-35a4-455d-a7e6-5eb518c5aea3">
+
 
 ---
 
@@ -42,15 +44,11 @@ Este proyecto incluye varios archivos que juntos crean una calculadora capaz de 
 - **¿Qué hace?**:
   Define las estructuras y prototipos necesarios para que el programa funcione. Es el "mapa" que conecta los operadores (`+`, `-`, `*`, `/`, `%`) con sus funciones.
 
-![Prototipos](https://media.geeksforgeeks.org/wp-content/uploads/20221208182602/FunctionPointers.png)
-
 ---
 
 #### **3.2 `3-op_functions.c`** ➕➖✖️➗
 - **¿Qué hace?**:
   Implementa las funciones matemáticas que realizan operaciones como suma, resta, multiplicación, división y módulo. También maneja errores como la división por cero.
-
-![Operaciones matemáticas](https://media.geeksforgeeks.org/wp-content/uploads/20190813122200/Operators.png)
 
 ---
 
@@ -58,15 +56,11 @@ Este proyecto incluye varios archivos que juntos crean una calculadora capaz de 
 - **¿Qué hace?**:
   Selecciona qué función ejecutar dependiendo del operador (`+`, `-`, etc.). Es como un cerebro que conecta el operador ingresado con la función correspondiente.
 
-![Selector de funciones](https://media.geeksforgeeks.org/wp-content/uploads/20200317170255/PointersC.png)
-
 ---
 
 #### **3.4 `3-main.c`** 🚀
 - **¿Qué hace?**:
   Es el punto de entrada del programa. Aquí se reciben los argumentos, se selecciona la operación correcta y se muestra el resultado. También maneja errores como argumentos incorrectos o intentos de dividir por cero.
-
-![Inicio del programa](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/HelloWorld_in_C.svg/512px-HelloWorld_in_C.svg.png)
 
 ---
 
