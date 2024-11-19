@@ -1,76 +1,99 @@
-# Function Pointers in C
+# Function Pointers in C 🧠✨
 
 ## Descripción 📖
 
-Este proyecto trata sobre **punteros a funciones** en C. Con los punteros a funciones podemos decidir qué función ejecutar en tiempo de ejecución, simplemente pasando su dirección como argumento.
+Este proyecto explora el concepto de **punteros a funciones** en C, una herramienta poderosa que permite ejecutar funciones dinámicamente según nuestras necesidades.
 
-El objetivo principal de esto es aprender a:
-- Usar punteros a funciones para resolver problemas de manera modular.
-- Entender qué almacenan los punteros a funciones y cómo los usa el programa.
-- Ver dónde se almacenan los punteros a funciones en la memoria.
+![Punteros en C](https://upload.wikimedia.org/wikipedia/commons/c/c3/C_Programming_Language.svg)
 
 ---
 
 ## Estructura del Proyecto 🛠️
 
-Este proyecto está dividido en varias tareas, y cada una está implementada en un archivo específico:
-
-### **1 Ejercicio `0-print_name.c`**
+### **0. `print_name.c`** 🎨
 - **¿Qué hace?**:
-  Esta función imprime un nombre, pero permite elegir cómo se imprime. Recibe un nombre como cadena y un puntero a función que decide el formato de impresión (por ejemplo, tal cual o en mayúsculas).
+  Imprime un nombre de diferentes maneras dependiendo de la función que le pases. 
+  Por ejemplo, puedes imprimir el nombre tal cual o en mayúsculas.
+
+![Ejemplo de impresión](https://media.geeksforgeeks.org/wp-content/uploads/20190723103148/NamePointer.png)
 
 ---
 
-### **2 Ejercicio `1-array_iterator.c`**
+### **1. `array_iterator.c`** 🔄
 - **¿Qué hace?**:
-  Este archivo contiene una función que aplica una acción a cada elemento de un arreglo. Puedes pasar cualquier función que actúe sobre un entero (por ejemplo, imprimirlo como está o en hexadecimal).
+  Aplica una función a cada elemento de un arreglo. Puedes hacer que se impriman como están, en hexadecimal, o cualquier otra operación que definas.
+
+![Arreglos iterados](https://media.geeksforgeeks.org/wp-content/uploads/20190918192327/Pointer.png)
 
 ---
 
-### **3 Ejercicio `2-int_index.c`**
+### **2. `int_index.c`** 🔍
 - **¿Qué hace?**:
-  Se implementa una función que busca un entero en un arreglo usando un puntero a función para decidir la condición de búsqueda. Por ejemplo, puedes buscar un número específico o el primer número positivo.
+  Busca un entero en un arreglo utilizando una función para definir la condición de búsqueda. Por ejemplo, buscar el primer número positivo o un número específico.
+
+![Búsqueda de índices](https://media.geeksforgeeks.org/wp-content/uploads/20221201192427/SearchAlgorithm.png)
 
 ---
 
-### **4. Calculadora (`3-calc.h`, `3-op_functions.c`, `3-get_op_func.c`, `3-main.c`)**
-En este ejercicio combinamos varios archivos para crear una calculadora básica que usa punteros a funciones para realizar operaciones matemáticas.
+### **3. Calculadora modular (`3-calc`)** 🧮
 
-#### **4.1 `3-calc.h`**
-- **¿Qué hace?**:
-  Define la estructura y los prototipos necesarios para que todo el programa funcione. Es como un mapa que conecta los operadores (`+`, `-`, `*`, `/`, `%`) con las funciones que los ejecutan.
+Este proyecto incluye varios archivos que juntos crean una calculadora capaz de realizar operaciones matemáticas básicas (`+`, `-`, `*`, `/`, `%`) usando punteros a funciones.
 
-#### **4.2 `3-op_functions.c`**
+#### **3.1 `3-calc.h`** 🗺️
 - **¿Qué hace?**:
-  Contiene las funciones que realizan las operaciones matemáticas básicas: suma, resta, multiplicación, división y módulo. También maneja errores como la división por cero.
+  Define las estructuras y prototipos necesarios para que el programa funcione. Es el "mapa" que conecta los operadores (`+`, `-`, `*`, `/`, `%`) con sus funciones.
 
-#### **4.3 `3-get_op_func.c`**
-- **¿Qué hace?**:
-  Este archivo decide qué función ejecutar basándose en el operador que el usuario proporciona (`+`, `-`, etc.). Básicamente, conecta el operador con la función correspondiente.
-
-#### **4.4 Archivo `3-main.c`**
-- **¿Qué hace?**:
-  Es el punto de entrada del programa. Aquí se reciben los argumentos, se selecciona la operación correcta, y se muestra el resultado. También maneja errores como argumentos incorrecto.
+![Prototipos](https://media.geeksforgeeks.org/wp-content/uploads/20221208182602/FunctionPointers.png)
 
 ---
 
-## Resumen de todos los ejercicios 🤔
+#### **3.2 `3-op_functions.c`** ➕➖✖️➗
+- **¿Qué hace?**:
+  Implementa las funciones matemáticas que realizan operaciones como suma, resta, multiplicación, división y módulo. También maneja errores como la división por cero.
 
-1. **Impresión de nombres (`0-print_name.c`):**
-   - Imprimimos un nombre pasando diferentes funciones de impresión.
-2. **Iteración sobre arreglos (`1-array_iterator.c`):**
-   - Aplicamos diferentes acciones sobre los elementos de un arreglo, como imprimirlos de distintas formas.
-3. **Búsqueda dinámica (`2-int_index.c`):**
-   - Buscamos elementos en un arreglo usando condiciones que decides al momento de ejecutar.
-4. **Calculadora modular (`3-calc`):**
-   - Realizamos  operaciones matemáticas pasando operadores y ejecutando las funciones correspondientes.
+![Operaciones matemáticas](https://media.geeksforgeeks.org/wp-content/uploads/20190813122200/Operators.png)
 
 ---
 
+#### **3.3 `3-get_op_func.c`** 🤖
+- **¿Qué hace?**:
+  Selecciona qué función ejecutar dependiendo del operador (`+`, `-`, etc.). Es como un cerebro que conecta el operador ingresado con la función correspondiente.
+
+![Selector de funciones](https://media.geeksforgeeks.org/wp-content/uploads/20200317170255/PointersC.png)
+
+---
+
+#### **3.4 `3-main.c`** 🚀
+- **¿Qué hace?**:
+  Es el punto de entrada del programa. Aquí se reciben los argumentos, se selecciona la operación correcta y se muestra el resultado. También maneja errores como argumentos incorrectos o intentos de dividir por cero.
+
+![Inicio del programa](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/HelloWorld_in_C.svg/512px-HelloWorld_in_C.svg.png)
+
+---
+
+## Resumen de las Tareas 🌟
+
+1. **Impresión de nombres (`0-print_name.c`)** 🎨:
+   - Imprime un nombre utilizando diferentes funciones para personalizar la salida.
+
+2. **Iteración sobre arreglos (`1-array_iterator.c`)** 🔄:
+   - Aplica una función dinámica a los elementos de un arreglo, como imprimirlos de distintas formas.
+
+3. **Búsqueda dinámica (`2-int_index.c`)** 🔍:
+   - Encuentra elementos en un arreglo basándose en una condición que decides al ejecutar.
+
+4. **Calculadora modular (`3-calc`)** 🧮:
+   - Realiza operaciones matemáticas utilizando operadores (`+`, `-`, `*`, `/`, `%`) y funciones asociadas.
+
+---
 
 ## Recursos Adicionales 📚
 
-Si quieres profundizar más en el tema, aquí hay algunos recursos útiles:
+Si quieres aprender más sobre punteros a funciones, consulta estos recursos:
 - [Function Pointers in C](https://www.geeksforgeeks.org/function-pointer-in-c/)
 - [Pointers to Functions](https://www.tutorialspoint.com/cprogramming/c_function_pointer.htm)
 - [Why Pointers to Functions](https://stackoverflow.com/questions/840501/how-do-function-pointers-in-c-work)
+
+---
+
+## ¡Gracias por leer! 💻✨
