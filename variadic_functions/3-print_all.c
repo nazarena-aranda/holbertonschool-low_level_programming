@@ -29,7 +29,8 @@ void print_all(const char * const format, ...)
 				p = va_arg(args, char *);
 				if (p == NULL)
 					printf("(nil)");
-				else
+				break;
+				if (p != NULL)
 					printf("%s", p);
 				break;
 		}
